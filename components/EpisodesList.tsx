@@ -10,7 +10,7 @@ export default async function EpisodesList() {
   const { data: episodes, error } = await supabase
     .from('episodes')
     .select('*')
-    .order('id', { ascending: true });
+    .order('id', { ascending: false });
 
   if (error) {
     console.error('Supabase fetch error:', error);
